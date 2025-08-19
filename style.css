@@ -72,11 +72,6 @@ body {
   border: 2px solid var(--orange);
   margin: 10px;
   background: url('./assets/profile.jpeg') center/cover no-repeat;
-  transition: background 0.2s cubic-bezier(0, 0, 0, 1);
-}
-
-.profile .circle:hover {
-  background: url('./assets/avatar.png') center/cover no-repeat;
 }
 
 .switch {
@@ -112,7 +107,7 @@ body {
   animation: slide-out 0.4s;
 }
 
-.switch .button:hover{
+.switch .button:hover {
   outline: 8px solid var(--gray);
 }
 
