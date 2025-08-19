@@ -3,9 +3,9 @@
 :root {
   --orange: rgba(214, 66, 24, 1);
   --background: rgba(47, 42, 37, 1);
-  --gray: rgba(96, 93, 92, 1);
+  --gray: rgba(96, 93, 92, 0.329);
   --text-color: rgba(255, 255, 255, 1);
-  --transparent-gray: rgba(96, 93, 92, 0.3);
+  --transparent-gray: rgba(96, 93, 92, 0.329);
   --transparent-hover: rgba(214, 65, 24, 0.8);
   --text-color-hover: rgba(255, 255, 255, 1);
   --sun: none;
@@ -72,7 +72,7 @@ body {
   border: 2px solid var(--orange);
   margin: 10px;
   background: url('./assets/profile.jpeg') center/cover no-repeat;
-  transition: background 0.2s cubic-bezier(0.0, 0.0, 0.0, 1);
+  transition: background 0.2s cubic-bezier(0, 0, 0, 1);
 }
 
 .profile .circle:hover {
@@ -109,11 +109,33 @@ body {
   transform: translateY(-50%);
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.329);
   cursor: pointer;
-  transition: transform 0.3s ease;
+  animation: slide-out 0.4s;
+}
+
+.switch .button:hover{
+  outline: 8px solid var(--gray);
 }
 
 #light-mode .switch .button {
-  transform: translate(30px, -50%);
+  animation: slide-in 0.4s forwards;
+}
+
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes slide-out {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
+  }
 }
 
 .switch span {
