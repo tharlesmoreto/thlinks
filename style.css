@@ -85,7 +85,7 @@ body {
 }
 
 .switch .button .sun {
-  display: var(--sun);
+  display: var(--sun); 
 }
 
 .switch .button {
